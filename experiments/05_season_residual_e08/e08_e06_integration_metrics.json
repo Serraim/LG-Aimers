@@ -1,0 +1,215 @@
+{
+  "run_at": "2026-08-17T08:31:21",
+  "experiment": "E08-integration",
+  "branch": "exp/baek-32/e08-residual-context",
+  "validation": "2019~2023 -> 2024",
+  "rules": {
+    "uses_test_rows": false,
+    "uses_test_prediction_distribution": false,
+    "context_excluded_by_rolling_nested_validation": true
+  },
+  "e05": {
+    "score": 737.1474552351542,
+    "brier": 0.24796548135319918,
+    "pred_mean": 0.4962752533308666,
+    "pred_std": 0.041535923424259984
+  },
+  "e05_members": [
+    {
+      "name": "feat_main",
+      "weight": 0.43224567617184423,
+      "reused": true
+    },
+    {
+      "name": "feat_seed",
+      "weight": 0.33983228653655145,
+      "best_iteration": 246,
+      "fit_sec": 14.13973331451416
+    },
+    {
+      "name": "feat_small",
+      "weight": 0.05271423884519504,
+      "best_iteration": 293,
+      "fit_sec": 13.57812237739563
+    },
+    {
+      "name": "feat_l2",
+      "weight": 0.17520779844640935,
+      "best_iteration": 212,
+      "fit_sec": 15.679638147354126
+    }
+  ],
+  "e06": {
+    "score": 740.1593425920838,
+    "brier": 0.24795795744995544,
+    "pred_mean": 0.49615986502905973,
+    "pred_std": 0.03990013996873388
+  },
+  "catboost": {
+    "name": "catboost_feat",
+    "description": "E04 62개 피처 + CatBoost categorical ID 처리",
+    "n_features": 62,
+    "cat_features": [
+      "game_month",
+      "game_dayofweek",
+      "top_bottom",
+      "game_type",
+      "balls_before",
+      "strikes_before",
+      "outs_before",
+      "base_state",
+      "pitcher_id",
+      "batter_id",
+      "pitcher_hand",
+      "batter_hand",
+      "pitcher_team_id",
+      "batter_team_id",
+      "count_state",
+      "hand_matchup"
+    ],
+    "best_iteration": 73,
+    "brier": 0.24830047566064514,
+    "score": 603.046166774035,
+    "pred_mean": 0.4953813230869483,
+    "pred_std": 0.032951613314982364,
+    "preprocess_sec": 1.6454312801361084,
+    "fit_sec": 216.04178833961487,
+    "params": {
+      "iterations": 1500,
+      "learning_rate": 0.05,
+      "depth": 7,
+      "loss_function": "Logloss",
+      "eval_metric": "BrierScore",
+      "l2_leaf_reg": 5.0,
+      "random_seed": 42,
+      "random_strength": 1.0,
+      "bootstrap_type": "Bayesian",
+      "bagging_temperature": 1.0,
+      "rsm": 0.8,
+      "thread_count": -1,
+      "task_type": "CPU",
+      "allow_writing_files": false,
+      "verbose": 100
+    },
+    "top_feature_importance": [
+      {
+        "feature": "game_type",
+        "importance": 34.59994115889552
+      },
+      {
+        "feature": "season",
+        "importance": 18.578119712782417
+      },
+      {
+        "feature": "pitcher_rate_shrunk",
+        "importance": 7.125717192937421
+      },
+      {
+        "feature": "batter_team_id",
+        "importance": 5.748010520516961
+      },
+      {
+        "feature": "asof_pitcher_success_rate",
+        "importance": 4.0674712609627806
+      },
+      {
+        "feature": "hand_matchup",
+        "importance": 3.9845151659281366
+      },
+      {
+        "feature": "pitcher_id",
+        "importance": 3.6324545386586107
+      },
+      {
+        "feature": "asof_pitcher_reverse_rate",
+        "importance": 3.5518950447191604
+      },
+      {
+        "feature": "game_month",
+        "importance": 2.7792203584030175
+      },
+      {
+        "feature": "pitcher_team_id",
+        "importance": 2.2894710031392247
+      },
+      {
+        "feature": "asof_pitcher_ball_rate",
+        "importance": 1.7687851152678933
+      },
+      {
+        "feature": "game_dayofweek",
+        "importance": 1.3023582574357628
+      },
+      {
+        "feature": "asof_batter_success_rate",
+        "importance": 1.185044238157234
+      },
+      {
+        "feature": "asof_pitcher_prev5_game_success_rate",
+        "importance": 1.1829382109479418
+      },
+      {
+        "feature": "asof_pitcher_prev1_game_success_rate",
+        "importance": 1.0574750438447076
+      },
+      {
+        "feature": "asof_pitcher_prev3_game_success_rate",
+        "importance": 0.9469006233475498
+      },
+      {
+        "feature": "same_hand",
+        "importance": 0.7511415593553634
+      },
+      {
+        "feature": "balls_before",
+        "importance": 0.5793317051061047
+      },
+      {
+        "feature": "batter_rate_plus",
+        "importance": 0.46254793827097246
+      },
+      {
+        "feature": "asof_pitcher_offspeed_rate",
+        "importance": 0.4137356521272764
+      }
+    ]
+  },
+  "optimized_ensemble": {
+    "score": 767.1520631645557,
+    "brier": 0.2478905277642453,
+    "pred_mean": 0.4913457091373766,
+    "pred_std": 0.04021968151755301,
+    "weights": {
+      "e06": 0.3793745553828436,
+      "residual": 0.6206254446171564
+    },
+    "reference": "e06",
+    "delta_score": 26.992720572471853,
+    "delta_brier": -6.74296857101353e-05,
+    "monthly_delta": {
+      "early_3_5": {
+        "rows": 99027,
+        "brier_delta": 1.151014082101387e-06
+      },
+      "mid_6_7": {
+        "rows": 77584,
+        "brier_delta": -0.0001357930195542978
+      },
+      "late_8_10": {
+        "rows": 76896,
+        "brier_delta": -8.677321548219985e-05
+      }
+    }
+  },
+  "prediction_correlation": {
+    "e06": {
+      "e06": 1.0,
+      "residual": 0.9651744330962849
+    },
+    "residual": {
+      "e06": 0.9651744330962849,
+      "residual": 1.0
+    }
+  },
+  "total_sec": 269.4026551246643
+}

@@ -1,0 +1,82 @@
+{
+  "run_at": "2026-08-17T08:26:42",
+  "experiment": "E08-integration",
+  "branch": "exp/baek-32/e08-residual-context",
+  "validation": "2019~2023 -> 2024",
+  "rules": {
+    "uses_test_rows": false,
+    "uses_test_prediction_distribution": false,
+    "context_excluded_by_rolling_nested_validation": true
+  },
+  "e05": {
+    "score": 737.1474552351542,
+    "brier": 0.24796548135319918,
+    "pred_mean": 0.4962752533308666,
+    "pred_std": 0.041535923424259984
+  },
+  "e05_members": [
+    {
+      "name": "feat_main",
+      "weight": 0.43224567617184423,
+      "reused": true
+    },
+    {
+      "name": "feat_seed",
+      "weight": 0.33983228653655145,
+      "best_iteration": 246,
+      "fit_sec": 17.068363666534424
+    },
+    {
+      "name": "feat_small",
+      "weight": 0.05271423884519504,
+      "best_iteration": 293,
+      "fit_sec": 17.474671363830566
+    },
+    {
+      "name": "feat_l2",
+      "weight": 0.17520779844640935,
+      "best_iteration": 212,
+      "fit_sec": 13.056405305862427
+    }
+  ],
+  "e06": null,
+  "catboost": null,
+  "optimized_ensemble": {
+    "score": 767.3288261067835,
+    "brier": 0.24789008619817168,
+    "pred_mean": 0.49130271643450757,
+    "pred_std": 0.0408060234426027,
+    "weights": {
+      "e05": 0.36835264958629177,
+      "residual": 0.6316473504137082
+    },
+    "reference": "e05",
+    "delta_score": 30.18137087162927,
+    "delta_brier": -7.539515502749672e-05,
+    "monthly_delta": {
+      "early_3_5": {
+        "rows": 99027,
+        "brier_delta": -1.0356407430522907e-06
+      },
+      "mid_6_7": {
+        "rows": 77584,
+        "brier_delta": -0.00014293016040684003
+      },
+      "late_8_10": {
+        "rows": 76896,
+        "brier_delta": -0.00010301640663615275
+      }
+    }
+  },
+  "prediction_correlation": {
+    "e05": {
+      "e05": 1.0,
+      "residual": 0.9627669924814799
+    },
+    "residual": {
+      "e05": 0.9627669924814799,
+      "residual": 1.0
+    }
+  },
+  "total_sec": 54.11354160308838
+}

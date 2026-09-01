@@ -1,0 +1,47 @@
+{
+  "experiment_id": "E61-C-submission",
+  "model_path": "models\\e61c_joint_seed_ensemble.joblib",
+  "n_train": 1475092,
+  "n_train_joint": 1474300,
+  "n_features": 72,
+  "seeds": [
+    42,
+    2024,
+    3407
+  ],
+  "trees": 232,
+  "alpha": 0.771856807188269,
+  "prediction_shift": -0.010129522428340365,
+  "shift_source": "E61-C 2024 validation center error only",
+  "seed_records": [
+    {
+      "seed": 42,
+      "fit_sec": 339.64190125465393
+    },
+    {
+      "seed": 2024,
+      "fit_sec": 246.29852533340454
+    },
+    {
+      "seed": 3407,
+      "fit_sec": 365.4451758861542
+    }
+  ],
+  "model_size_bytes": 38447774,
+  "submission_zip": "submissions/e61c_joint_seed_ensemble.zip",
+  "submission_zip_size_bytes": 38452116,
+  "submission_zip_sha256": "76DF5033C900E97D389229D33FEBD33B2E3D4BC427846761318F88D9280A5328",
+  "local_submission_rows": 5,
+  "local_prediction_range": [0.38157601657976026, 0.476493169230581],
+  "batch_single_max_abs_diff": 0.0,
+  "zip_crc_ok": true,
+  "benchmark_rows": 50000,
+  "benchmark_sec": 11.436,
+  "projected_full_test_sec": 56.2,
+  "leaderboard_submissions": 1,
+  "leaderboard_submission_id": 65323,
+  "leaderboard_score": 1011.9796537543,
+  "leaderboard_score_timestamp": "2026-08-25 15:51:04",
+  "leaderboard_delta_vs_e42": 17.457485898199934,
+  "total_sec": 968.0083830356598
+}

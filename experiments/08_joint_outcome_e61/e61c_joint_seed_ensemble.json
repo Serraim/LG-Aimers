@@ -1,0 +1,208 @@
+{
+  "experiment_id": "E61-C",
+  "description": "Three-seed E61 joint model with 2022-fitted binary/joint blend",
+  "seeds": [
+    42,
+    2024,
+    3407
+  ],
+  "seed42_source": "E61-A saved OOF predictions",
+  "newly_trained_seeds": [
+    2024,
+    3407
+  ],
+  "seed_aggregation": "fixed equal arithmetic mean; no seed selection",
+  "trees": 232,
+  "test_data_used": false,
+  "leaderboard_submissions": 0,
+  "training_records": {
+    "2022": {
+      "n_valid": 247472,
+      "n_features": 72,
+      "seed_records": [
+        {
+          "seed": 42,
+          "source": "reused_e61a",
+          "fit_sec": 0.0
+        },
+        {
+          "seed": 2024,
+          "source": "trained",
+          "fit_sec": 149.70345854759216,
+          "n_train_joint": 728028
+        },
+        {
+          "seed": 3407,
+          "source": "trained",
+          "fit_sec": 134.97180199623108,
+          "n_train_joint": 728028
+        }
+      ]
+    },
+    "2023": {
+      "n_valid": 245525,
+      "n_features": 72,
+      "seed_records": [
+        {
+          "seed": 42,
+          "source": "reused_e61a",
+          "fit_sec": 0.0
+        },
+        {
+          "seed": 2024,
+          "source": "trained",
+          "fit_sec": 173.5384349822998,
+          "n_train_joint": 975412
+        },
+        {
+          "seed": 3407,
+          "source": "trained",
+          "fit_sec": 213.967618227005,
+          "n_train_joint": 975412
+        }
+      ]
+    },
+    "2024": {
+      "n_valid": 253507,
+      "n_features": 72,
+      "seed_records": [
+        {
+          "seed": 42,
+          "source": "reused_e61a",
+          "fit_sec": 0.0
+        },
+        {
+          "seed": 2024,
+          "source": "trained",
+          "fit_sec": 225.6056034564972,
+          "n_train_joint": 1220874
+        },
+        {
+          "seed": 3407,
+          "source": "trained",
+          "fit_sec": 276.0411660671234,
+          "n_train_joint": 1220874
+        }
+      ]
+    }
+  },
+  "status": "complete",
+  "elapsed_sec": 1186.968411207199,
+  "alpha": 0.771856807188269,
+  "alpha_definition": "member=(1-alpha)*binary_lgbm + alpha*three_seed_joint_lgbm",
+  "alpha_fit": "closed-form raw Brier minimizer on 2022 OOF, clipped to [0,1]",
+  "alpha_source_season": 2022,
+  "folds": {
+    "2022": {
+      "fold_role": "selection",
+      "alpha": 0.771856807188269,
+      "alpha_source_season": 2022,
+      "e42": {
+        "brier": 0.24308194312276415,
+        "score": 2440.831899041895,
+        "center_error": -0.0024420804564166954,
+        "centered_brier": 0.24307597936580855,
+        "centered_score": 2443.225409476568,
+        "pred_mean": 0.5264783630685074,
+        "pred_std": 0.07430685582800875,
+        "valid_mean": 0.5289204435249241
+      },
+      "e61c": {
+        "brier": 0.24306326223678507,
+        "score": 2448.32933662239,
+        "center_error": -0.0024732791676614907,
+        "centered_brier": 0.24305714512694387,
+        "centered_score": 2450.784394121208,
+        "pred_mean": 0.5264471643572626,
+        "pred_std": 0.0730813241722796,
+        "valid_mean": 0.5289204435249241
+      },
+      "delta_brier": -1.868088597908879e-05,
+      "delta_score": 7.497437580494989,
+      "delta_centered_brier": -1.883423886467339e-05,
+      "delta_centered_score": 7.558984644640077
+    },
+    "2023": {
+      "fold_role": "stress",
+      "alpha": 0.771856807188269,
+      "alpha_source_season": 2022,
+      "e42": {
+        "brier": 0.2499124663581582,
+        "score": 35.0127254375665,
+        "center_error": 0.008442441185502692,
+        "centered_brier": 0.24984119154498752,
+        "centered_score": 63.5226509144049,
+        "pred_mean": 0.508399675683008,
+        "pred_std": 0.029324045554517616,
+        "valid_mean": 0.49995723449750534
+      },
+      "e61c": {
+        "brier": 0.24984611223822983,
+        "score": 61.5543736030788,
+        "center_error": 0.008300008377603196,
+        "centered_brier": 0.24977722209916156,
+        "centered_score": 89.11042943197111,
+        "pred_mean": 0.5082572428751085,
+        "pred_std": 0.028957281430765126,
+        "valid_mean": 0.49995723449750534
+      },
+      "delta_brier": -6.635411992836349e-05,
+      "delta_score": 26.5416481655123,
+      "delta_centered_brier": -6.396944582595654e-05,
+      "delta_centered_score": 25.587778517566214
+    },
+    "2024": {
+      "fold_role": "evaluation",
+      "alpha": 0.771856807188269,
+      "alpha_source_season": 2022,
+      "e42": {
+        "brier": 0.2477431637686347,
+        "score": 826.1432198645834,
+        "center_error": 0.010208267507118396,
+        "centered_brier": 0.24763895504313782,
+        "centered_score": 867.8589268106607,
+        "pred_mean": 0.4963131876868373,
+        "pred_std": 0.04302410179588167,
+        "valid_mean": 0.4861049201797189
+      },
+      "e61c": {
+        "brier": 0.24772723036396663,
+        "score": 832.5215076386394,
+        "center_error": 0.010129522428340365,
+        "centered_brier": 0.2476246231393404,
+        "centered_score": 873.5961191229435,
+        "pred_mean": 0.49623444260805927,
+        "pred_std": 0.04270425033842241,
+        "valid_mean": 0.4861049201797189
+      },
+      "delta_brier": -1.593340466807258e-05,
+      "delta_score": 6.378287774055934,
+      "delta_centered_brier": -1.43319037974321e-05,
+      "delta_centered_score": 5.737192312282787
+    }
+  },
+  "bootstrap_2024_pitcher_cluster": {
+    "n_clusters": 391,
+    "n_bootstrap": 2000,
+    "seed": 6122,
+    "mean_loss_difference": -1.4331903797455781e-05,
+    "ci_lower_95": -3.26421865139941e-05,
+    "ci_upper_95": 2.688592073541971e-06
+  },
+  "selection_checks": {
+    "three_fixed_seeds_equal_average": true,
+    "seed42_reused_from_e61a": true,
+    "alpha_fitted_only_on_2022_raw_brier": true,
+    "alpha_bounded_zero_to_one": true,
+    "stress_2023_excluded_from_selection": true,
+    "e42_oof_baseline_reproduced": true,
+    "raw_brier_improved_2024": true,
+    "centered_brier_improved_2024": true,
+    "pitcher_bootstrap_upper_below_zero": false
+  },
+  "decision": {
+    "adopted": false,
+    "status": "rejected"
+  },
+  "total_sec": 1187.1483662128448
+}

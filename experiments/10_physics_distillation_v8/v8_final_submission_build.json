@@ -1,0 +1,126 @@
+{
+  "experiment_id": "V8-submission",
+  "description": "S73 pipeline with cb18 replaced by physics-distilled variant; tree count calibrated like the official builder; meta coefficients FROZEN",
+  "fixes_vs_v7": [
+    "tree count calibrated (V7 used 1000 arbitrarily)",
+    "no meta-learner refit (V7 refit non-negative)"
+  ],
+  "v7_lb_result": {
+    "score": 1066.7396556619,
+    "vs_s73": -23.07
+  },
+  "s73_reference_lb": 1089.8103798611,
+  "training_meta": {
+    "experiment_id": "V7-deployment",
+    "description": "deployment-grade physics-distilled cb18 trained on all of 2019-2024, using the official deployment feature path",
+    "alpha": 0.5,
+    "n_folds_teacher_oof": 5,
+    "n_rows": 1475092,
+    "n_features": 72,
+    "physics_match_rate": 0.865935819596337,
+    "feature_contract_matches_official": true,
+    "sanity_check": {
+      "corr_with_official_cb18": 0.9960715263275338,
+      "in_sample_brier_new": 0.24367913360094878,
+      "in_sample_brier_official": 0.24385995062318586
+    },
+    "model_path": "results/deploy_distilled_cb18.cbm",
+    "elapsed_sec": 142.63890409469604
+  },
+  "distilled_tree_count": 1000,
+  "zip_path": "submissions\\v8_physics_frozen_coef.zip",
+  "zip_sha256": "F6179B035D4164E5617DDC3E90812BF2B15254D75B9EBD26B634F1646A43CEE5",
+  "zip_entries": [
+    {
+      "name": "script.py",
+      "size": 18290,
+      "crc": "D1C6A3A2"
+    },
+    {
+      "name": "model/s37_inference.py",
+      "size": 14483,
+      "crc": "69A760E5"
+    },
+    {
+      "name": "model/__init__.py",
+      "size": 0,
+      "crc": "00000000"
+    },
+    {
+      "name": "model/scripts/__init__.py",
+      "size": 0,
+      "crc": "00000000"
+    },
+    {
+      "name": "model/scripts/ab_feature.py",
+      "size": 36553,
+      "crc": "6D109DCE"
+    },
+    {
+      "name": "model/scripts/e13_feature_groups.py",
+      "size": 17625,
+      "crc": "70D65466"
+    },
+    {
+      "name": "model/s37_canonical.joblib",
+      "size": 26746576,
+      "crc": "D90E110E"
+    },
+    {
+      "name": "model/s61_contextual_prototype_retrieval.joblib",
+      "size": 153546,
+      "crc": "FB370642"
+    },
+    {
+      "name": "model/s63_low_rank_matchup_residual.joblib",
+      "size": 68373,
+      "crc": "8899EBF2"
+    },
+    {
+      "name": "model/s67_final_official_tabm.pt",
+      "size": 6317216,
+      "crc": "183AA656"
+    },
+    {
+      "name": "model/s67_final_tabm_preprocessor.joblib",
+      "size": 42916,
+      "crc": "97142C4E"
+    },
+    {
+      "name": "model/s67_final_tabm_training.json",
+      "size": 1006,
+      "crc": "85EF0C45"
+    },
+    {
+      "name": "model/wheels/tabm-0.0.3-py3-none-any.whl",
+      "size": 17347,
+      "crc": "9A00F7EB"
+    },
+    {
+      "name": "model/wheels/rtdl_num_embeddings-0.0.12-py3-none-any.whl",
+      "size": 13293,
+      "crc": "74BC0363"
+    },
+    {
+      "name": "requirements.txt",
+      "size": 169,
+      "crc": "23CD9153"
+    }
+  ],
+  "smoke_test": {
+    "rows": 5,
+    "min": 0.3813862134191464,
+    "max": 0.4843188724928435,
+    "row_independence": {
+      "batch_single": 2.980232227667301e-09,
+      "reverse": 2.980232227667301e-09
+    },
+    "stdout_tail": [
+      "Saved C:\\Users\\User2\\AppData\\Local\\Temp\\v8_sub_mfzx_3v9\\output\\submission.csv: rows=5"
+    ]
+  },
+  "test_values_read": false,
+  "leaderboard_used": false,
+  "status": "built_not_submitted",
+  "elapsed_sec": 27.316725730895996
+}

@@ -1,0 +1,109 @@
+{
+  "experiment_id": "S67-final-submission",
+  "source_candidate": "S66B gated official TabM correction over S61/S63 champion",
+  "formula": "0.5*S61 + 0.5*S63 + 1.0*(0.05*(TabM-S37) when game_type == R else 0)",
+  "selection_source": "2023 OOF only",
+  "holdout_result_2024_delta_centered_score_vs_champion": 3.6813607252606744,
+  "holdout_result_2024_delta_brier_vs_champion": -7.977175562001726e-06,
+  "test_values_read": false,
+  "leaderboard_used_for_weights": false,
+  "zip_path": "submissions\\s67_final_s66b_gated_tabm.zip",
+  "zip_sha256": "E255426498E736B5DF0D1382E2417F293BD44BC49556779EC64B6D3AAA52C6E3",
+  "zip_size_bytes": 32675362,
+  "zip_entries": [
+    {
+      "name": "script.py",
+      "size": 14629,
+      "crc": "0FD5C83A"
+    },
+    {
+      "name": "model/s37_inference.py",
+      "size": 14483,
+      "crc": "69A760E5"
+    },
+    {
+      "name": "model/__init__.py",
+      "size": 0,
+      "crc": "00000000"
+    },
+    {
+      "name": "model/scripts/__init__.py",
+      "size": 0,
+      "crc": "00000000"
+    },
+    {
+      "name": "model/scripts/ab_feature.py",
+      "size": 36553,
+      "crc": "6D109DCE"
+    },
+    {
+      "name": "model/scripts/e13_feature_groups.py",
+      "size": 17625,
+      "crc": "70D65466"
+    },
+    {
+      "name": "model/s37_canonical.joblib",
+      "size": 26619716,
+      "crc": "298CFCE6"
+    },
+    {
+      "name": "model/s61_contextual_prototype_retrieval.joblib",
+      "size": 153546,
+      "crc": "FB370642"
+    },
+    {
+      "name": "model/s63_low_rank_matchup_residual.joblib",
+      "size": 68373,
+      "crc": "8899EBF2"
+    },
+    {
+      "name": "model/s67_final_official_tabm.pt",
+      "size": 6317216,
+      "crc": "183AA656"
+    },
+    {
+      "name": "model/s67_final_tabm_preprocessor.joblib",
+      "size": 42916,
+      "crc": "97142C4E"
+    },
+    {
+      "name": "model/s67_final_tabm_training.json",
+      "size": 1006,
+      "crc": "85EF0C45"
+    },
+    {
+      "name": "model/wheels/tabm-0.0.3-py3-none-any.whl",
+      "size": 17347,
+      "crc": "9A00F7EB"
+    },
+    {
+      "name": "model/wheels/rtdl_num_embeddings-0.0.12-py3-none-any.whl",
+      "size": 13293,
+      "crc": "74BC0363"
+    },
+    {
+      "name": "requirements.txt",
+      "size": 169,
+      "crc": "23CD9153"
+    }
+  ],
+  "packaged_smoke_test": {
+    "stdout_tail": [
+      "Saved C:\\Users\\백규민\\AppData\\Local\\Temp\\s67_submission_ugxwnp1d\\output\\submission.csv: rows=5"
+    ],
+    "stderr_tail": [
+      "  warnings.warn(",
+      "C:\\Users\\백규민\\Documents\\GitHub\\LG-Aimers-hackathon\\.venv\\Lib\\site-packages\\rtdl_num_embeddings.py:340: UserWarning: The 44-th feature has just two bin edges, which means only one bin. Strictly speaking, using a single bin for the piecewise-linear encoding should not break anything, but it is the same as using sklearn.preprocessing.MinMaxScaler",
+      "  warnings.warn("
+    ],
+    "rows": 5,
+    "min_prediction": 0.3875991498912285,
+    "max_prediction": 0.4881028527061753,
+    "row_independence_audit": {
+      "batch_single_max_abs_diff": 2.9802322831784522e-09,
+      "reverse_order_max_abs_diff": 2.9802322831784522e-09,
+      "finite": true
+    }
+  },
+  "status": "built_not_submitted"
+}

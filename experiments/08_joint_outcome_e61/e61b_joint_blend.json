@@ -1,0 +1,126 @@
+{
+  "experiment_id": "E61-B",
+  "description": "2022-fitted blend of E42 binary and E61-A joint LGBM members",
+  "alpha": 0.7074745127512206,
+  "alpha_definition": "member=(1-alpha)*binary_lgbm + alpha*joint_lgbm",
+  "alpha_fit": "closed-form raw Brier minimizer on 2022 OOF, clipped to [0,1]",
+  "alpha_source_season": 2022,
+  "models_retrained": false,
+  "test_data_used": false,
+  "leaderboard_submissions": 0,
+  "folds": {
+    "2022": {
+      "fold_role": "selection",
+      "alpha": 0.7074745127512206,
+      "alpha_source_season": 2022,
+      "n_rows": 247472,
+      "e42": {
+        "brier": 0.24308194312276415,
+        "score": 2440.831899041895,
+        "center_error": -0.0024420804564166954,
+        "centered_brier": 0.24307597936580855,
+        "centered_score": 2443.225409476568,
+        "pred_mean": 0.5264783630685074,
+        "pred_std": 0.07430685582800875,
+        "valid_mean": 0.5289204435249241
+      },
+      "e61b": {
+        "brier": 0.24306460510460404,
+        "score": 2447.7903864000727,
+        "center_error": -0.0026375051176993347,
+        "centered_brier": 0.24305764867135815,
+        "centered_score": 2450.5823002366146,
+        "pred_mean": 0.5262829384072247,
+        "pred_std": 0.0732959420509261,
+        "valid_mean": 0.5289204435249241
+      },
+      "delta_brier": -1.733801816011793e-05,
+      "delta_score": 6.9584873581775355,
+      "delta_centered_brier": -1.8330694450396923e-05,
+      "delta_centered_score": 7.356890760046554
+    },
+    "2023": {
+      "fold_role": "stress",
+      "alpha": 0.7074745127512206,
+      "alpha_source_season": 2022,
+      "n_rows": 245525,
+      "e42": {
+        "brier": 0.2499124663581582,
+        "score": 35.0127254375665,
+        "center_error": 0.008442441185502692,
+        "centered_brier": 0.24984119154498752,
+        "centered_score": 63.5226509144049,
+        "pred_mean": 0.508399675683008,
+        "pred_std": 0.029324045554517616,
+        "valid_mean": 0.49995723449750534
+      },
+      "e61b": {
+        "brier": 0.24985976472242935,
+        "score": 56.093379883315194,
+        "center_error": 0.008356946145347932,
+        "centered_brier": 0.2497899261735531,
+        "centered_score": 84.02879963818054,
+        "pred_mean": 0.5083141806428533,
+        "pred_std": 0.028949197252962564,
+        "valid_mean": 0.49995723449750534
+      },
+      "delta_brier": -5.2701635728846785e-05,
+      "delta_score": 21.080654445748692,
+      "delta_centered_brier": -5.126537143440579e-05,
+      "delta_centered_score": 20.506148723775645
+    },
+    "2024": {
+      "fold_role": "evaluation",
+      "alpha": 0.7074745127512206,
+      "alpha_source_season": 2022,
+      "n_rows": 253507,
+      "e42": {
+        "brier": 0.2477431637686347,
+        "score": 826.1432198645834,
+        "center_error": 0.010208267507118396,
+        "centered_brier": 0.24763895504313782,
+        "centered_score": 867.8589268106607,
+        "pred_mean": 0.4963131876868373,
+        "pred_std": 0.04302410179588167,
+        "valid_mean": 0.4861049201797189
+      },
+      "e61b": {
+        "brier": 0.24773255214469994,
+        "score": 830.3911500851414,
+        "center_error": 0.010227805998461181,
+        "centered_brier": 0.24762794412915778,
+        "centered_score": 872.2666964922299,
+        "pred_mean": 0.4963327261781801,
+        "pred_std": 0.04271485868870479,
+        "valid_mean": 0.4861049201797189
+      },
+      "delta_brier": -1.0611623934758674e-05,
+      "delta_score": 4.247930220557919,
+      "delta_centered_brier": -1.1010913980036285e-05,
+      "delta_centered_score": 4.407769681569221
+    }
+  },
+  "bootstrap_2024_pitcher_cluster": {
+    "n_clusters": 391,
+    "n_bootstrap": 2000,
+    "seed": 6112,
+    "mean_loss_difference": -1.1010913979990258e-05,
+    "ci_lower_95": -2.7649879349192463e-05,
+    "ci_upper_95": 5.749139182450774e-06
+  },
+  "selection_checks": {
+    "alpha_fitted_only_on_2022_raw_brier": true,
+    "alpha_bounded_zero_to_one": true,
+    "stress_2023_excluded_from_selection": true,
+    "e42_oof_baseline_reproduced": true,
+    "raw_brier_improved_2024": true,
+    "centered_brier_improved_2024": true,
+    "pitcher_bootstrap_upper_below_zero": false
+  },
+  "decision": {
+    "adopted": false,
+    "status": "rejected"
+  },
+  "total_sec": 4.228846311569214,
+  "status": "complete"
+}

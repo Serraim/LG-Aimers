@@ -1,0 +1,12 @@
+{
+  "experiment_id": "E61-B-submission",
+  "source_model": "models\\e61c_joint_seed_ensemble.joblib",
+  "model_path": "models\\e61b_single_joint_ensemble.joblib",
+  "seeds": [
+    42
+  ],
+  "alpha": 0.7074745127512206,
+  "prediction_shift": -0.010227805998461181,
+  "leaderboard_submissions": 0,
+  "model_size_bytes": 15723650
+}

@@ -1,0 +1,17 @@
+{
+  "experiment_id": "S67-final-submission",
+  "submitted_file": "submissions/s67_final_s66b_gated_tabm.zip",
+  "submitted_at": "2026-08-28 22:00:41",
+  "leaderboard_score": 1080.1927381194,
+  "runtime_seconds": 27,
+  "local_validation_basis": {
+    "candidate": "S66B gated official TabM correction over S61/S63 champion",
+    "selection_2023_delta_centered_score_vs_champion": 3.140530632417267,
+    "selection_2023_delta_brier_vs_champion": -8.522547564615568e-06,
+    "holdout_2024_delta_centered_score_vs_champion": 3.6813607252606744,
+    "holdout_2024_delta_brier_vs_champion": -7.977175562001726e-06
+  },
+  "test_values_read": false,
+  "leaderboard_used_for_weights": false,
+  "conclusion": "Submission succeeded but leaderboard improvement was modest; keep as a valid reference point, not a new tuning signal."
+}

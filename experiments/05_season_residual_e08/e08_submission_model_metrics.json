@@ -1,0 +1,62 @@
+{
+  "run_at": "2026-08-17T09:03:37",
+  "experiment": "E08-final-artifact",
+  "branch": "exp/baek-32/e08-residual-context",
+  "model_path": "models\\e08_season_residual_ensemble.joblib",
+  "model_size_mb": 2.82815,
+  "validation": {
+    "scheme": "2019~2023 -> 2024",
+    "score": 767.3288261067835,
+    "brier": 0.24789008619817168,
+    "e05_weight": 0.36835264958629177,
+    "residual_weight": 0.6316473504137082
+  },
+  "residual": {
+    "best_iteration": 153,
+    "prior_method": "linear_all",
+    "prior_2025": 0.4746946535529588,
+    "season_rates": {
+      "2019": 0.5646700054335694,
+      "2020": 0.5327116970588356,
+      "2021": 0.5327616072006734,
+      "2022": 0.5289204435249241,
+      "2023": 0.49995723449750534,
+      "2024": 0.4861049201797189
+    },
+    "fit_sec": 12.480063438415527
+  },
+  "members": [
+    "feat_main",
+    "feat_seed",
+    "feat_small",
+    "feat_l2",
+    "season_residual"
+  ],
+  "weights": [
+    0.15921884009011708,
+    0.12517812316070664,
+    0.01941742954955222,
+    0.06453825678591586,
+    0.6316473504137082
+  ],
+  "rules": {
+    "uses_test_rows_for_statistics": false,
+    "uses_test_prediction_distribution": false,
+    "prediction_offset_is_train_only_constant": true
+  },
+  "environment": {
+    "python": "3.11.2",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "lightgbm": "4.7.0",
+    "scikit-learn": "1.9.0",
+    "pandas": "3.0.5",
+    "numpy": "1.26.4"
+  },
+  "sample_prediction": {
+    "rows": 5,
+    "min": 0.39594932717525444,
+    "max": 0.48682776044363785,
+    "mean": 0.4478729432174081
+  },
+  "total_sec": 18.183222770690918
+}

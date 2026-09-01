@@ -1,0 +1,52 @@
+{
+  "experiment_id": "S26-B-submission",
+  "candidate": "B",
+  "model_path": "models\\s26b_slot_combo.joblib",
+  "zip_path": "submissions\\s26b_slot_combo.zip",
+  "member_weights": {
+    "cor5": 0.14722609395911448,
+    "cal6": 0.14722609395911448,
+    "cb18": 0.535624463876365,
+    "season_residual": 0.13773718539516475,
+    "xgboost": 0.001257127297176001,
+    "trackman_moe": 0.03092903551306536
+  },
+  "prediction_shift": -0.010213747947341034,
+  "shift_source": "S26-B 2024 validation center error only",
+  "training_records": [
+    {
+      "member": "cor5",
+      "seed": 42,
+      "trees": 232,
+      "fit_sec": 83.36779952049255
+    },
+    {
+      "member": "cor5",
+      "seed": 2024,
+      "trees": 232,
+      "fit_sec": 96.35039448738098
+    },
+    {
+      "member": "cor5",
+      "seed": 3407,
+      "trees": 232,
+      "fit_sec": 92.86333179473877
+    },
+    {
+      "member": "cal6",
+      "seed": 42,
+      "trees": 232,
+      "fit_sec": 116.20606541633606
+    }
+  ],
+  "model_size_bytes": 20338705,
+  "zip_size_bytes": 20337829,
+  "zip_sha256": "CA07A1FE2C8EDB4EBA27346BF94D1B9F7EC44ACA5332ADFD31D595F9F674227B",
+  "leaderboard_submissions": 1,
+  "leaderboard_submission_id": 67635,
+  "leaderboard_score": 1012.1224916997,
+  "leaderboard_runtime_seconds": 26,
+  "leaderboard_delta_vs_e61c": 0.14283794540001393,
+  "leaderboard_result": "new_best",
+  "total_sec": 405.6856451034546
+}

@@ -1,0 +1,86 @@
+{
+  "experiment": "E02 / E03",
+  "notebook": "notebooks/exp/02_lgbm.ipynb",
+  "run_at": "2026-08-14T00:00:19",
+  "environment": {
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "lightgbm": "4.5.0",
+    "scikit-learn": "1.8.0",
+    "pandas": "2.0.3",
+    "numpy": "1.26.4",
+    "seed": 42
+  },
+  "validation": {
+    "scheme": "time-based holdout",
+    "train_seasons": "2019~2023",
+    "valid_season": 2024,
+    "n_train": 1221585,
+    "n_valid": 253507,
+    "train_rate": 0.5315815109059132,
+    "valid_rate": 0.4861049201797189
+  },
+  "params": {
+    "n_estimators": 3000,
+    "learning_rate": 0.03,
+    "num_leaves": 63,
+    "min_child_samples": 200,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.8,
+    "reg_lambda": 1.0,
+    "n_jobs": -1,
+    "random_state": 42,
+    "verbose": -1
+  },
+  "results": {
+    "A. RandomForest + 중앙값 대치": {
+      "train_brier": null,
+      "train_score": null,
+      "valid_brier": 0.248769,
+      "valid_score": 415.57,
+      "fit_sec": null,
+      "extra": {
+        "note": "E01에서 측정. 이 노트북에서는 재실행하지 않음"
+      }
+    },
+    "B0. LightGBM 분류 + 중앙값 대치": {
+      "train_brier": 0.2428394710510421,
+      "train_score": 2475.129543091814,
+      "valid_brier": 0.24824753163959515,
+      "valid_score": 624.2401431530542,
+      "fit_sec": 47.159910440444946,
+      "extra": {
+        "사용 트리": "201 / 3000"
+      },
+      "pred_valid_mean": 0.496873199004,
+      "pred_valid_std": 0.038686573908460066
+    },
+    "B. LightGBM 분류 + 결측 native": {
+      "train_brier": 0.24286854580879488,
+      "train_score": 2463.453055858766,
+      "valid_brier": 0.24825677076291255,
+      "valid_score": 620.5416374961636,
+      "fit_sec": 79.71719408035278,
+      "extra": {
+        "사용 트리": "198 / 3000"
+      },
+      "pred_valid_mean": 0.49709253240424806,
+      "pred_valid_std": 0.03895570058639559
+    },
+    "C. LightGBM 회귀 + 결측 native (L2=Brier)": {
+      "train_brier": 0.24337124928131065,
+      "train_score": 2261.5662257518434,
+      "valid_brier": 0.2482650410915256,
+      "valid_score": 617.2309492296635,
+      "fit_sec": 59.94348216056824,
+      "extra": {
+        "사용 트리": "139 / 3000",
+        "clip 전 범위": "0.3803 ~ 0.6299",
+        "clip된 행": "0"
+      },
+      "pred_valid_mean": 0.49627790551940765,
+      "pred_valid_std": 0.03693468990324728
+    }
+  }
+}
