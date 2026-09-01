@@ -55,4 +55,3 @@ experiments/                점수를 실제로 움직인 13개 전환점 — �
 리더보드 활용 범위는 대회 운영진에 자진 문의해 확인받았습니다
 ([docs/RULES_LB_PROBING.md](docs/RULES_LB_PROBING.md) 참고). 행 독립성, 미래정보
 금지 등 세부 규칙은 팀 저장소의 `AGENTS.md`에 별도로 정리되어 있습니다.
->>>>>>> origin/main
